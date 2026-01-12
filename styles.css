@@ -84,8 +84,8 @@ table.letters {
 
 .native {
 	font-size: 20px; /* ~15pt */
-	font-weight: 400; /* medium */
 	line-height: 1.2;
+	font-weight: 500;
 }
 
 .latin {
@@ -100,7 +100,18 @@ table.letters {
 	color: #333333; /* luma(30) approximation */
 	font-style: italic;
 }
-
+.native:hover {
+	color: #ff9900;
+	cursor: default;
+}
+.latin:hover {
+	color: #ff9900;
+	cursor: default;
+}
+.name:hover {
+	color: #ff9900;
+	cursor: default;
+}
 /* Responsive breakpoints */
 @media (max-width: 900px) {
 	main { max-width: 720px; }
@@ -116,8 +127,8 @@ table.letters {
 	.group h2 { font-size: 15px; }
 
 	/* Compress table spacing */
-	table.letters { border-spacing: 3px; }
-	.cell { padding: 10px; border-radius: 7px; }
+	table.letters { border-spacing: 6px; }
+	.cell { padding: 10px; border-radius: 0px; }
 	.native { font-size: 22px; }
 	.latin { font-size: 13px; }
 	.name  { font-size: 12px; }
