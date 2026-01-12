@@ -5,57 +5,52 @@
 	--muted: #666666;
 	--border: #bbbbbb;
 	--accent: #2d2d2d;
+	--higlight: #ff9900;
 }
-
 html, body {
 	height: 100%;
 }
-
 body {
 	margin: 10px;
 	font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+	font-display: swap;
 	background: var(--bg);
 	color: var(--fg);
 	display: grid;
-	place-items: start center; /* center horizontally */
+	place-items: start center;
 }
-
+h1{
+	font-size: medium;
+}
 main {
 	width: 100%;
-	max-width: 900px; /* keep content centered and readable */
+	max-width: 900px;
 	padding: 24px 16px 48px;
 }
-
 header {
 	width: 100%;
 	display: grid;
 	place-items: center;
 	padding-top: 20px;
 }
-
 .title {
 	font-size: 28px;
 	font-weight: 600;
 	margin: 0.25rem 0 0.75rem;
 	text-align: center;
 }
-
 .group h2 {
-	font-size: 16px; /* mirrors Typst heading size */
+	font-size: 16px;
 	font-weight: 400;
 	text-align: left;
 	margin: 0 0 0.6rem;
 	color: var(--accent);
 }
-
-/* Grid containing two tables */
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 24px; /* similar to gutter: 1cm visually */
+	gap: 24px;
 }
-
-/* Tables styling */
 table.letters {
 
 	border-spacing: 4px; /* gutter: 1pt → small spacing */
@@ -64,63 +59,54 @@ table.letters {
     display: flex;
     align-items: flex-start;
 }
-
-
-
 .cell {
-	padding: 12px; /* inset: 8pt approx */
+	padding: 12px;
 	text-align: center;
-	border: 1px solid var(--border); /* stroke: 0.5pt + gray */
+	border: 1px solid var(--border);
 	background: #fafafa;
     width: 10rem;
 
 	vertical-align: middle;
 }
-
 .cell.empty {
 	background: transparent;
 	border: none;
 }
-
 .native {
-	font-size: 20px; /* ~15pt */
+	font-size: 20px;
 	line-height: 1.2;
 	font-weight: 500;
 }
-
 .latin {
 	margin-top: 4px;
-	font-size: 15px; /* ~10pt */
-	color: #3a3a3a; /* gray.darken(40%) */
+	font-size: 15px;
+	color: #3a3a3a;
 }
-
 .name {
 	margin-top: 2px;
-	font-size: 14px; /* ~9pt */
-	color: #333333; /* luma(30) approximation */
+	font-size: 14px;
+	color: #333333;
 	font-style: italic;
 }
 .native:hover {
-	color: #ff9900;
+	color: var(--higlight);
 	cursor: default;
 }
 .latin:hover {
-	color: #ff9900;
+	color: var(--higlight);
 	cursor: default;
 }
 .name:hover {
-	color: #ff9900;
+	color: var(--higlight);
 	cursor: default;
 }
-/* Responsive breakpoints */
 @media (max-width: 900px) {
 	main { max-width: 720px; }
 	.grid {
-		grid-template-columns: 1fr; /* stack tables vertically on tablets */
+		grid-template-columns: 1fr;
 		gap: 20px;
 	}
 }
-
 @media (max-width: 600px) {
 	main { padding: 16px 12px 32px; }
 	.title { font-size: 24px; }
@@ -139,8 +125,6 @@ table.letters {
 	.native { font-size: 20px; }
 	.latin { font-size: 12px; }
 	.name  { font-size: 11px; }
-
-	/* Allow horizontal scroll for very small screens */
 	.grid { overflow-x: auto; }
 	table.letters { min-width: 320px; }
 }
