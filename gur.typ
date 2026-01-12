@@ -1,5 +1,5 @@
 #set text(lang: "pa",script: "guru",dir: ltr)
-#set page(margin: 0.5cm,paper: "a5")
+#set page(margin: 0.4cm,paper: "a5")
 
 #set document(
   title: [Gurmukhi ਗੁਰਮੁਖਿ],
@@ -12,7 +12,7 @@
 
 #show heading: set text(size: 8pt, weight: "regular")
 
-#v(1em)
+#v(0em)
 = Grouped by similar characters:
 #v(0.4em)
 
@@ -22,25 +22,25 @@
 #let letter(native, latin, name) = table.cell(
   inset: 8pt,
   align: center,
-  stroke: 0.5pt + gray,
+  stroke: 0.8pt + gray,
 
   [
-    #text(size: 15pt, weight: "medium")[#native]
+    #text(size: 18pt, weight: "medium")[#native]
     #linebreak()
-    #text(size: 10pt, fill: gray.darken(40%))[#latin]
+    #text(size: 11pt, fill: gray.darken(50%))[#latin]
     #linebreak()
-    #text(size: 9pt, fill: luma(30), style: "italic")[#name]
+    #text(size: 10pt, fill: luma(1), style: "italic")[#name]
   ]
 )
 #set align(center)
 #let empty = table.cell(stroke: none, [])
 #grid(
   columns: (1fr, 1fr),
-  gutter: 1cm,
+  gutter: 0.5cm,
 
 table(
   columns: 4,
-  gutter: 1pt,
+  gutter: 0.5pt,
   letter("ਦ","D","dadda"),
   letter("ਢ","Dh","dhadda"),
   letter("ਫ","Ph","phappa"),
@@ -90,7 +90,7 @@ table(
   columns: 5,
   gutter: 1pt,
   letter("ਸ਼","Sh","shashaa"),
-  letter("ਖ਼","Kh","khakhaa"),
+  letter("ਖ਼","Kh","khakha"),
   letter("ਗ਼","G","gagaa"),
   letter("ਜ਼","Z","zazaa"),
   letter("ਲ਼","Lh","lallaa"),
@@ -100,22 +100,22 @@ table(
   letter("ਿ","i","sihārī"),
   letter("ੀ","ee","bihārī"),
   letter("ੁ","u","auṅkaṛ"),
-  letter("ੂ","oo","dulaiṅkaṛ"),
+  letter("ੂ","oo","dulankar"),
   letter("ੇ","e","lāvā"),
   letter("ੈ","ai","dulāvā"),
   letter("ੋ","o","hōṛā"),
   letter("ੌ","au","kanauṛā"),
   empty,
 
-  letter("ਂ","n","Bindee"),
-  letter("ੰ","nn","Tippee"),
-  letter("ੱ","","Adhak"),
+  letter("ਂ","n","bindee"),
+  letter("ੰ","nn","tippee"),
+  letter("ੱ","","adhak"),
   empty,
   empty,
 
   letter("੍ਹ","h","paeree-haha"),
   letter("੍ਰ","r","paeree-rara"),
-  letter("੍ਵ","v","paeree--wawa"),
+  letter("੍ਵ","v","paeree-wawa"),
   empty,
   empty,
 
