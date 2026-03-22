@@ -20,12 +20,17 @@
 
 		<main>
 			<section class="group">
-				<h1>Grouped by similar characters:</h1>
+				<div class="group-head">
+					<h1 id="layoutHeading">Grouped by similar characters:</h1>
+					<button id="layoutToggle" class="layout-toggle" type="button" aria-pressed="false">
+						Arrange by sounds
+					</button>
+				</div>
 
 				<!-- Grid with two columns -->
 				<div class="grid">
 					<!-- Table 1: base letters -->
-					<table class="letters cols-4" aria-label="Base Gurmukhi letters grouped by similarity">
+					<table id="baseLettersTable" class="letters cols-4" aria-label="Base Gurmukhi letters grouped by similarity">
 						<tbody>
 							<tr>
 								<td class="cell"><div class="native">ਦ</div><div class="latin">D</div><div class="name">dadda</div></td>

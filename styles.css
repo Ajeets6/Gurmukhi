@@ -35,6 +35,31 @@ header {
 	place-items: center;
 	padding-top: 20px;
 }
+.group-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+.layout-toggle {
+	appearance: none;
+	border: 1px solid var(--border);
+	background: var(--bg);
+	color: var(--fg);
+	padding: 8px 10px;
+	border-radius: 6px;
+	font-size: 14px;
+	line-height: 1;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.layout-toggle:hover {
+	border-color: var(--accent);
+}
+.layout-toggle:focus-visible {
+	outline: 2px solid var(--higlight);
+	outline-offset: 2px;
+}
 .title {
 	font-size: 28px;
 	font-weight: 600;
