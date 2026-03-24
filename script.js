@@ -91,8 +91,12 @@
 		if (!baseTable) return;
 
 		const toggleBtn = document.getElementById("layoutToggle");
+			const printBtn = document.getElementById("printBtn");
 		const headingEl = document.getElementById("layoutHeading");
 		if (!toggleBtn || !headingEl) return;
+			if (printBtn) {
+				printBtn.addEventListener("click", () => window.print());
+			}
 
 		const originalTbody = baseTable.tBodies[0];
 		if (!originalTbody) return;

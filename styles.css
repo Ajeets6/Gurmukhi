@@ -41,6 +41,11 @@ header {
 	justify-content: space-between;
 	gap: 12px;
 }
+.group-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
 .layout-toggle {
 	appearance: none;
 	border: 1px solid var(--border);
@@ -59,6 +64,13 @@ header {
 .layout-toggle:focus-visible {
 	outline: 2px solid var(--higlight);
 	outline-offset: 2px;
+}
+
+@media print {
+	.group-actions,
+	.layout-toggle {
+		display: none !important;
+	}
 }
 .title {
 	font-size: 28px;
